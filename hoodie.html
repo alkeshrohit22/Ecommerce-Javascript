@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoodie</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/product.css">
+    <!---Boxicons CDN Setup for icons-->
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="images/hoodie-sky.jpg" alt="" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="images/hoodie-blue.jpg" alt="" class="image-list">
+                            <img src="images/hoodie-black.jpg" alt="" class="image-list">
+                            <img src="images/hoodie-blue.jpg" alt="" class="image-list">
+                            <img src="images/hoodie-sky.jpg" alt="" class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="breadcrumb">
+                        <span><a href="home.html">Home</a></span>
+                        <span><a href="product-list.html">Product</a></span>
+                        <span class="active">Hoodie</span>
+                    </div>
+
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>ADRO Men's Solid Cotton Zipper Hoodies</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">(100 Review)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">999.00 Rs</span>
+                            <span class="sale-price">1499.00 Rs</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>This winter Indian homegrown brand ADRO brings you the Best Quality 100% Cotton Hoodies
+                                to keep you warm. Made in India Product for the Indian market at the Best Prices. Pair
+                                it with Jeans/Joggers or Shorts and this sweatshirts/hoodie made of soft fabric will
+                                make other guys go green with envy. We at ADRO offers Top Quality casual wear in the
+                                widest variety which makes it easy to choose and at the prices that are easy to reach.
+                                ADRO products are made of Premium Fabrics which are Eco-Friendly to ensure the Best
+                                Quality and Great Comfort. </p>
+                        </div>
+                        <div class="product-size">
+                            <h4>Size</h4>
+                            <div class="size-layout">
+                                <input type="radio" name="size" value="S" id="1" class="size-input"
+                                    onclick="sizeofThing(this.value)">
+                                <label for="1" class="size">S</label>
+
+                                <input type="radio" name="size" value="M" id="2" class="size-input"
+                                    onclick="sizeofThing(this.value)">
+                                <label for="2" class="size">M</label>
+
+                                <input type="radio" name="size" value="L" id="3" class="size-input"
+                                    onclick="sizeofThing(this.value)">
+                                <label for="3" class="size">L</label>
+
+                                <input type="radio" name="size" value="XL" id="4" class="size-input"
+                                    onclick="sizeofThing(this.value)">
+                                <label for="4" class="size">XL</label>
+
+                                <input type="radio" name="size" value="XXL" id="5" class="size-input"
+                                    onclick="sizeofThing(this.value)">
+                                <label for="5" class="size">XXL</label>
+                            </div>
+                        </div>
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <input type="radio" name="color" value="black" class="color-input"
+                                    onclick="colorOfItem(this.value)">
+                                <label for="black" class="black"></label>
+                                <input type="radio" name="color" value="red" class="color-input"
+                                    onclick="colorOfItem(this.value)">
+                                <label for="red" class="red"></label>
+
+                                <input type="radio" name="color" value="blue" class="color-input"
+                                    onclick="colorOfItem(this.value)">
+                                <label for="blue" class="blue"></label>
+                            </div>
+                        </div>
+                        <span class="divider"></span>
+
+                        <div class="product-btn-group">
+                            <button class="btn minus-btn disabled" type="button"
+                                onclick="quantityOfItemDec()">-</button>
+                            <input type="text" name="numberOfitem" id="quantity" value="1">
+                            <button class="btn plus-btn" type="button" onclick="quantityOfItemInc()">+</button>
+
+                            <button class="button" onclick="ItemValueValidation();">
+                                <span>Add to cart</span>
+                            </button>
+                            <button class="button" onclick="ItemValueValidation();">
+                                <span>Buy Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--script-->
+    <script src="js/product.js"></script>
+</body>
+
+</html>
