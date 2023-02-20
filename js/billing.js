@@ -14,9 +14,14 @@ function placeOrder() {
     alert("Your Order is Succesfully Generated!!!");
 }
 
+// Prevent refresh
+document.getElementById("placeorderbtn").addEventListener("click", function (event) {
+    event.preventDefault()
+});
+
 
 function validationForm() {
-
+    
     var flag = flag;
 
     var ship_first_name, ship_last_name, ship_street_add, ship_apt_add, ship_city, ship_pin, ship_country;
@@ -39,20 +44,21 @@ function validationForm() {
     bil_country = document.forms["myForm"]["billing-country"].value;
 
 
-    console.log(ship_first_name);
-    console.log(ship_last_name);
-    console.log(ship_street_add);
-    console.log(ship_apt_add);
-    console.log(ship_city);
-    console.log(ship_pin);
-    console.log(ship_country);
+    // console.log(ship_first_name);
+    // console.log(ship_last_name);
+    // console.log(ship_street_add);
+    // console.log(ship_apt_add);
+    // console.log(ship_city);
+    // console.log(ship_pin);
+    // console.log(ship_country);
 
-    
+
 
     // First name Validation
     var regName = /^[a-zA-Z]+$/;
     if (ship_first_name == "" || ship_first_name == null) {
         alert("Please Enter Your First Name for Shipping!!!");
+        // document.forms["myForm"]["shipping-first-name"].focus();
         return false;
     }
     if ((ship_first_name.length <= 2) || (ship_first_name.length > 15)) {
@@ -119,7 +125,7 @@ function validationForm() {
         bil_pin = ship_pin;
         bil_country = ship_country;
 
-        
+
         flag = true;
     }
     else {
@@ -185,12 +191,10 @@ function validationForm() {
 
         flag = true;
     }
-
-
-    if(flag == true) {
+    if (flag == true) {
         placeOrder();
     }
-    else{
+    else {
         confirm("You have to fill shipping and billing address form first!!!");
     }
 }
@@ -228,7 +232,7 @@ for (var i = 0, l = inputs.length; i < l; i++) {
 }
 
 
-function catchData(){
-    ItemSize = localStorage.getItem    
+function catchData() {
+    ItemSize = localStorage.getItem
 }
 
