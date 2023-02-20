@@ -233,6 +233,6 @@ for (var i = 0, l = inputs.length; i < l; i++) {
 
 
 function catchData() {
-    ItemSize = localStorage.getItem
+    ItemSize = localStorage.getItem;
 }
 
