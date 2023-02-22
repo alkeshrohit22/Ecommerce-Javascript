@@ -21,7 +21,7 @@ document.getElementById("placeorderbtn").addEventListener("click", function (eve
 
 
 function validationForm() {
-    
+
     var flag = flag;
 
     var ship_first_name, ship_last_name, ship_street_add, ship_apt_add, ship_city, ship_pin, ship_country;
@@ -103,8 +103,16 @@ function validationForm() {
     }
 
     // Zip Code Validation
+    if (ship_pin == null || ship_pin == "") {
+        alert("Must Enter Pincode for shipping!!!");
+        return false;
+    }
     if (!/^[0-9]+$/.test(ship_pin)) {
         alert("Enter Numberical value only for Shipping!!!");
+        return false;
+    }
+    if(ship_pin.length < 5 || ship_pin.length > 6){
+        alert('Enter proper Pincode please!!!');
         return false;
     }
 
@@ -178,8 +186,16 @@ function validationForm() {
         }
 
         // Zip Code Validation
+        if (bil_pin == null || bil_pin == "") {
+            alert("Must Enter Pincode for Billing!!!");
+            return false;
+        }
         if (!/^[0-9]+$/.test(bil_pin)) {
             alert("Enter Numberical value only for Billing!!!");
+            return false;
+        }
+        if(bil_pin.length < 5 || bil_pin.length > 6){
+            alert('Enter proper Pincode please!!!');
             return false;
         }
 

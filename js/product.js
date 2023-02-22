@@ -20,7 +20,9 @@ sliderImageList[3].onclick = function () {
 
 // price of Element
 const priceOftheThing = document.getElementsByClassName("offer-price");
+
 let price = priceOftheThing[0].innerHTML;
+
 
 // size of item
 function sizeofThing(size) {
